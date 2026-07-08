@@ -590,7 +590,10 @@ def inframe( assttbl, insttbl ):
 
     instdf = pd.DataFrame(insttbl)
 
-    joindf = pd.merge(asstdf,instdf, how="left")
+    if insttbl:
+        joindf = pd.merge(asstdf,instdf, how="left")
+    else:
+        joindf = asstdf.copy()
 
     return (asstdf, instdf, joindf)
 
