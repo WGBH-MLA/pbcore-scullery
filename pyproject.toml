@@ -13,8 +13,6 @@ dependencies = [
     "pandas>=2.2.2"
 ]
 
-# If there are any scripts, they would go here.
-# For now, I'll omit this section as framify.py is not yet a CLI entry point.
 [project.scripts]
 framify = "pbcore_scullery.framify:main"
 
